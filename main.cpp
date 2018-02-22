@@ -28,7 +28,7 @@ do{
         }
     else
     {
-        cout<<"You'll need a bgger list!\n";
+        cout<<"You'll need a bigger list!\n";
     }
 
 }
