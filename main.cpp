@@ -33,5 +33,11 @@ do{
 
 }
 }while(input !='Q' && input!='q');
-  return 0;
+cout<<"==ITEMS TO BUY==\n";
+for(int i=0;i<5;i++)
+{
+cout<<i+1;
+cout<<" "<<list[i]<<endl;
+}
+return 0;
 }
