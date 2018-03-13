@@ -1,14 +1,15 @@
 //Author: Christian Orozco
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
 
 int main()
 {
-  string list[5]; //array of 5 strings
-  int numItems = 0;
-  char input;
-  string input2;
+ vector<string> list; 
+ int numItems = 0;
+ char input;
+ string input2;
 do{
   cout<<"\n==GROCERY LIST MANAGER==";
   cout<<"\nEnter your choice: ";
@@ -21,23 +22,32 @@ do{
         cout<< "What is the item?\n";
         cin>>input2;
 
-    if(numItems<5){
+    if(numItems>=0){
 
         list[numItems]=input2;
         numItems++;
         }
-    else
-    {
-        cout<<"You'll need a bigger list!\n";
-    }
 
 }
+
 }while(input !='Q' && input!='q');
-cout<<"==ITEMS TO BUY==\n";
-for(int i=0;i<5;i++)
+if(list.size() !=0)
 {
+cout<<"==ITEMS TO BUY==\n";
+
+for(int i=0;i<=list.size();i++)
+{
+
 cout<<i+1;
 cout<<" "<<list[i]<<endl;
 }
+}
+else
+{
+cout<<"No items to buy!\n";
 return 0;
 }
+return 0;
+}
+
+
